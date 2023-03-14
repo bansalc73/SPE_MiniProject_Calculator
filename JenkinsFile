@@ -4,16 +4,21 @@ pipeline{
 
         stage('Build'){
             steps {
-                cd /Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src
-                javac Calculator.java
-                java Calculator
+                dir('/Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src') {
+                    /* execute commands in the scripts directory */
+                    javac Calculator.java
+                    java Calculator
+                }
             }
         }
         stage('Test'){
             steps{
-                cd /Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src
-                javac Calculator.java
-                java Calculator
+                 dir('/Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src') {
+                    /* execute commands in the scripts directory */
+                    javac CalculatorTest.java
+                    java CalculatorTest
+                }
+                
             }
         }
     }
