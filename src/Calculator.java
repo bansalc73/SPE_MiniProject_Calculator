@@ -39,6 +39,8 @@ public class Calculator {
         // System.out.print("Calculator in JAVA\n");
         Scanner myObj = new Scanner(System.in);
 
+        myObj.hasNext();
+
         double a, b;
         int z;
     
