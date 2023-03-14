@@ -2,12 +2,18 @@ pipeline{
     agent any
     stages{
 
+        stage('Clone Git'){
+            steps{
+                git https://github.com/bansalc73/SPE_MiniProject_Calculator
+            }
+        }
+
         stage('Build'){
             steps {
                 dir('/Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src') {
                     /* execute commands in the scripts directory */
-                    javac Calculator.java
-                    java Calculator
+                    sh "javac Calculator.java"
+                    sh "java Calculator"
                 }
             }
         }
@@ -15,8 +21,8 @@ pipeline{
             steps{
                  dir('/Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src') {
                     /* execute commands in the scripts directory */
-                    javac CalculatorTest.java
-                    java CalculatorTest
+                    sh "javac CalculatorTest.java"
+                    sh "java CalculatorTest"
                 }
                 
             }
