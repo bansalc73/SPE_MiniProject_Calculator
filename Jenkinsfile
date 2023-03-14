@@ -2,7 +2,7 @@ pipeline{
 
     agent any
 
-    enviornment{
+    environment{
         PATH = "/usr/local/Cellar/maven/3.9.0/libexec:$PATH"
     }
 
