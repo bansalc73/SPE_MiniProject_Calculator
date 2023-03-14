@@ -39,10 +39,10 @@ public class Calculator {
         // System.out.print("Calculator in JAVA\n");
         Scanner myObj = new Scanner(System.in);
 
-        myObj.hasNext();
+       
 
         double a, b;
-        int z;
+        int z=0;
     
         System.out.print("WHAT YOU WANT TO FIND: \n" );
         System.out.print("Press '1' for Square root (√x) \n");
@@ -50,7 +50,9 @@ public class Calculator {
         System.out.print("Press '3' for Natural Logarithm (ln(x)) \n");
         System.out.print("Press '4' for Power (x^b) \n");
     
-        z = myObj.nextInt();
+        if( myObj.hasNext()){
+            z = myObj.nextInt();
+        }
         switch (z)
         {
         case 1:
