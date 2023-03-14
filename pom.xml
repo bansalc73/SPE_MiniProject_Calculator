@@ -7,11 +7,13 @@
     <groupId>org.example</groupId>
     <artifactId>calculatorDevOps</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -21,7 +23,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>calculator.Calculator</mainClass>
+                                    <mainClass>(put your main class name here)</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -59,3 +61,4 @@
     </properties>
 
 </project>
+
