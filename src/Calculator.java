@@ -78,6 +78,7 @@ public class Calculator {
             break;
            
         }
+        myObj.close();
     }
 }
 
