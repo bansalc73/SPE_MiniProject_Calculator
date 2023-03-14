@@ -1,8 +1,9 @@
 pipeline{
+
     agent any
 
     enviornment{
-        PATH = "/usr/local/Cellar/maven/3.9.0/libexec:$PATH"
+        PATH = /usr/local/Cellar/maven/3.9.0/libexec:$PATH
     }
 
     tools{
@@ -29,7 +30,7 @@ pipeline{
             
         }
             }
-        }
+        
         stage('Test'){
             steps{
                  dir('/Users/chiragbansal/eclipse-workspace/Calculator_JAVA/src') {
@@ -42,3 +43,4 @@ pipeline{
         }
     }
 }
+
