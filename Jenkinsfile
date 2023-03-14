@@ -1,10 +1,11 @@
 pipeline{
     agent any
+
     stages{
 
         stage('Clone Git'){
             steps{
-                git https://github.com/bansalc73/SPE_MiniProject_Calculator
+                git 'https://github.com/bansalc73/SPE_MiniProject_Calculator'
             }
         }
 
